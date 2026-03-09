@@ -1,0 +1,92 @@
+[
+  {
+    "text": "杀害生命",
+    "explanation": "故意杀害有生命的动物或生灵",
+    "referenceScore": 10,
+    "source": "警世功过格"
+  },
+  {
+    "text": "偷窃人财",
+    "explanation": "偷拿、窃取他人的财物",
+    "referenceScore": 10,
+    "source": "警世功过格"
+  },
+  {
+    "text": "暴殄天物",
+    "explanation": "任意浪费粮食和物资，糟蹋东西",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "不孝父母",
+    "explanation": "不孝顺、不奉养自己的父母",
+    "referenceScore": 10,
+    "source": "警世功过格"
+  },
+  {
+    "text": "欺凌孤弱",
+    "explanation": "欺负弱小无力反抗的人",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "损人利己",
+    "explanation": "做损害别人利益而使自己获利的事",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "负约失信",
+    "explanation": "违背约定，不守信用，说了不算",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "见人急难不救",
+    "explanation": "看到别人遇到急难却不出手相救",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "秽污水源",
+    "explanation": "污染水源或公共环境，损害公共卫生",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "恃势欺人",
+    "explanation": "仗着自己的权势或地位欺压他人",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "见人之危而加落井下石",
+    "explanation": "看到别人处于危难之中，不但不帮忙还雪上加霜",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "慢其先生",
+    "explanation": "对师长无礼，不尊重教导自己的人",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "用物不节",
+    "explanation": "使用物品没有节制，过度浪费资源",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "拾遗不还",
+    "explanation": "捡到别人丢失的东西据为己有，不归还",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "乘人之危取利",
+    "explanation": "趁别人处于危难之时谋取不正当利益",
+    "referenceScore": 10,
+    "source": "警世功过格"
+  }
+]

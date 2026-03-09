@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="77" fill="#FAF8F5"/>
+  <rect x="2" y="2" width="508" height="508" rx="72" fill="none" stroke="#B8860B" stroke-width="8"/>
+  <text x="256" y="296.96" font-size="215" text-anchor="middle" fill="#2D2A26" font-family="serif" font-weight="bold">善</text>
+</svg>

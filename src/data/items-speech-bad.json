@@ -1,0 +1,92 @@
+[
+  {
+    "text": "妄言",
+    "explanation": "说假话、说不真实的话欺骗别人",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "两舌",
+    "explanation": "在两方之间搬弄是非，挑拨离间",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "恶口骂人",
+    "explanation": "用恶毒的言语辱骂他人",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "绮语",
+    "explanation": "说花言巧语、轻浮不正经的话",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "谗言害善",
+    "explanation": "说谗言陷害善良正直的人",
+    "referenceScore": 10,
+    "source": "警世功过格"
+  },
+  {
+    "text": "揭人私隐",
+    "explanation": "在人前揭露别人的隐私和秘密",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "口是心非",
+    "explanation": "嘴上说一套，心里想的是另一套",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "嘲讽他人",
+    "explanation": "用讥讽嘲笑的话语贬低他人",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "扬人之恶",
+    "explanation": "到处宣扬别人做过的坏事和过错",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "教人恶法",
+    "explanation": "教唆他人做坏事或不好的方法",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "妄议人过",
+    "explanation": "在背后随意议论他人的过失",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "以恶言辱亲长",
+    "explanation": "用不好的言语顶撞、辱骂父母长辈",
+    "referenceScore": 10,
+    "source": "警世功过格"
+  },
+  {
+    "text": "诳诱愚人",
+    "explanation": "用花言巧语欺骗诱导不明事理的人",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "怒骂风雨",
+    "explanation": "遇到不顺心的事就口出怨言、满口牢骚",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "阻人为善",
+    "explanation": "用言语阻止他人做好事、行善举",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  }
+]

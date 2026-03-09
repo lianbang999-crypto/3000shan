@@ -1,0 +1,92 @@
+[
+  {
+    "text": "嫉人之能",
+    "explanation": "嫉妒别人的才能和本事",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "幸人之灾",
+    "explanation": "看到别人遭遇灾祸，心中感到幸灾乐祸",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "忌人之善",
+    "explanation": "忌恨别人做了好事或取得了好成绩",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "见他荣贵，愿其流败",
+    "explanation": "看到别人富贵荣华，暗暗希望他衰败倒霉",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "见他失便，便说他过",
+    "explanation": "看到别人遇到不顺，就在心里数落他的过错",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "负恩忘义",
+    "explanation": "忘记别人对自己的恩情和帮助，忘恩负义",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "念怨不休",
+    "explanation": "对别人的怨恨耿耿于怀，一直念念不忘",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "阴贼良善",
+    "explanation": "暗中心怀恶意，想要陷害善良的人",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "贪财不厌",
+    "explanation": "贪求财物永不满足，内心充满贪欲",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "心生淫念",
+    "explanation": "内心产生不正当的淫邪念头",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  },
+  {
+    "text": "怨天尤人",
+    "explanation": "遇到不顺心的事就抱怨上天、责怪别人",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "心起杀念",
+    "explanation": "因愤怒或仇恨，内心生起伤害他人的念头",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "以恶度君子之腹",
+    "explanation": "以恶意揣度好人的心思，把别人的好意想成坏意",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "见人有过不自省",
+    "explanation": "看到别人犯错只顾批评，不反思自己有没有同样的问题",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "知过不改",
+    "explanation": "明知自己有过错，却不愿意改正",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  }
+]

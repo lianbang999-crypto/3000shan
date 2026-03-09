@@ -1,0 +1,92 @@
+[
+  {
+    "text": "救人一命",
+    "explanation": "救了他人一条性命",
+    "referenceScore": 100,
+    "source": "警世功过格"
+  },
+  {
+    "text": "放生一命",
+    "explanation": "放生一条活物的性命，珍惜生灵",
+    "referenceScore": 10,
+    "source": "警世功过格"
+  },
+  {
+    "text": "敬奉父母",
+    "explanation": "孝敬奉养自己的父母长辈",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "恤人之孤",
+    "explanation": "照顾帮助孤苦无依的人",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "济人之急",
+    "explanation": "在别人急难之时伸出援手帮助他",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "施食于饥人",
+    "explanation": "给饥饿的人施舍食物",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "施药救病",
+    "explanation": "施舍药物帮助生病的人治病",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "修桥补路",
+    "explanation": "修缮桥梁、修补道路，方便他人出行",
+    "referenceScore": 10,
+    "source": "警世功过格"
+  },
+  {
+    "text": "拾遗还主",
+    "explanation": "捡到别人丢失的东西，归还给失主",
+    "referenceScore": 5,
+    "source": "警世功过格"
+  },
+  {
+    "text": "让路于人",
+    "explanation": "主动给别人让路，方便他人通行",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "敬老慈幼",
+    "explanation": "尊敬老人，爱护幼小",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "惜谷惜纸",
+    "explanation": "珍惜粮食，不浪费物资",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "不义之财不取",
+    "explanation": "不拿不义之财，不取不正当的利益",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "掩覆人之过失",
+    "explanation": "替别人遮掩过失，不让他在人前难堪",
+    "referenceScore": 1,
+    "source": "警世功过格"
+  },
+  {
+    "text": "助人成好事",
+    "explanation": "帮助别人把好事做成",
+    "referenceScore": 3,
+    "source": "警世功过格"
+  }
+]
