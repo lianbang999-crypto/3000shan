@@ -18,8 +18,9 @@ export function useItems(category?: Category, type?: ItemType) {
 
 export function useSystemItems(category?: Category, type?: ItemType) {
   return useLiveQuery(async () => {
-    const all = await db.items.where('isSystem').equals(1).toArray();
+    const all = await db.items.toArray();
     return all.filter((i) => {
+      if (!i.isSystem) return false;
       if (category && i.category !== category) return false;
       if (type && i.type !== type) return false;
       return true;

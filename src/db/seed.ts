@@ -35,7 +35,7 @@ function toDbItems(
 }
 
 export async function seedDatabase(): Promise<void> {
-  const count = await db.items.where('isSystem').equals(1).count();
+  const count = await db.items.count();
   if (count > 0) return; // Already seeded
 
   const allItems: DbItem[] = [
