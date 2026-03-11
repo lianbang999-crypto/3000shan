@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import PageShell from '../components/layout/PageShell';
+import { BarChart3 } from 'lucide-react';
 import {
   useDayStats,
   useCategoryStats,
@@ -140,8 +141,14 @@ export default function StatsPage() {
     return (
       <PageShell title="统计">
         <div className="flex flex-col items-center justify-center h-full px-8 pb-20">
-          <p className="text-text-muted text-sm text-center leading-relaxed">
-            还没有记录数据，开始记录后这里会显示统计
+          <div className="w-16 h-16 rounded-full bg-good-bg flex items-center justify-center mb-4">
+            <BarChart3 size={24} className="text-good/50" />
+          </div>
+          <p className="text-text-secondary text-sm text-center font-medium mb-1">
+            暂无统计数据
+          </p>
+          <p className="text-text-muted text-xs text-center leading-relaxed max-w-[200px]">
+            开始记录功过后，这里会显示趋势和分析
           </p>
         </div>
       </PageShell>

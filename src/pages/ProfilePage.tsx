@@ -14,7 +14,6 @@ import {
   Sun,
   Target,
   Trash2,
-  Info,
   ChevronRight,
 } from 'lucide-react';
 
@@ -277,26 +276,25 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        {/* About section */}
-        <section className="mx-5 mt-6">
+        <section className="mx-5 mt-6 mb-6">
           <h2 className="text-xs font-medium text-text-muted uppercase tracking-wider mb-2 px-1">
             关于
           </h2>
           <div className="bg-surface rounded-2xl border border-border p-5">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-good-bg flex items-center justify-center">
-                <Info size={16} className="text-good" />
+              <div className="w-10 h-10 rounded-full bg-accent-bg flex items-center justify-center">
+                <span className="font-classic text-lg text-accent">善</span>
               </div>
-              <h3 className="text-sm font-medium text-text">关于三千善</h3>
+              <div>
+                <h3 className="text-sm font-medium text-text">三千善</h3>
+                <p className="text-xs text-text-muted">每日自省与行善记录</p>
+              </div>
             </div>
-            <p className="text-sm text-text-secondary leading-relaxed">
-              三千善 — 每日自省与行善记录工具
+            <p className="text-xs text-text-secondary leading-relaxed mt-3 pt-3 border-t border-border">
+              灵感来自《了凡四训》。袁了凡先生发愿行三千善事，用功过格记录每日功过，最终改变了被算定的命运。
             </p>
-            <p className="text-xs text-text-muted mt-2 leading-relaxed">
-              灵感来自《了凡四训》，袁了凡先生发愿行三千善事，改变了被算定的命运。
-            </p>
-            <p className="text-xs text-text-muted mt-3 pt-3 border-t border-border">
-              P0 v0.1.0
+            <p className="text-[11px] text-text-muted mt-3">
+              v0.2.0 &middot; 数据存储于本地设备
             </p>
           </div>
         </section>

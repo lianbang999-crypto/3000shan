@@ -5,7 +5,10 @@ import { getToday } from '../utils/date';
 
 export function useRecordsByDate(date: string) {
   return useLiveQuery(
-    async () => db.records.where('date').equals(date).toArray(),
+    async () => {
+      const records = await db.records.where('date').equals(date).toArray();
+      return records.sort((a, b) => a.createdAt - b.createdAt);
+    },
     [date]
   ) ?? [];
 }
@@ -56,6 +59,7 @@ export async function toggleRecord(
       id: uuid(),
       date,
       itemId,
+      text: '',
       type,
       category,
       note: '',
@@ -84,4 +88,33 @@ export async function saveReflection(date: string, text: string) {
       createdAt: Date.now(),
     });
   }
+}
+
+export async function addRecord(
+  date: string,
+  text: string,
+  type: 'good' | 'bad',
+): Promise<string> {
+  const { v4: uuid } = await import('uuid');
+  const isBackfill = date !== getToday();
+  const record: DbRecord = {
+    id: uuid(),
+    date,
+    text,
+    type,
+    category: 'mind',
+    note: '',
+    isBackfill,
+    createdAt: Date.now(),
+  };
+  await db.records.add(record);
+  return record.id;
+}
+
+export async function deleteRecord(recordId: string): Promise<void> {
+  await db.records.delete(recordId);
+}
+
+export async function updateRecordText(recordId: string, text: string): Promise<void> {
+  await db.records.update(recordId, { text: text.trim() });
 }

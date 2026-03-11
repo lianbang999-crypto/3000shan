@@ -1,11 +1,26 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTotalGoodCount, useRecordsByDate } from '../hooks/useRecords';
 import { useStreakDays } from '../hooks/useStats';
 import { useAppStore } from '../stores/app';
 import { getToday, getLunarGreeting, formatDateChinese } from '../utils/date';
-import { ClipboardCheck, TrendingUp, BookOpen } from 'lucide-react';
-import { CATEGORY_LABELS } from '../utils/constants';
-import type { Category } from '../utils/constants';
+import { ClipboardCheck, TrendingUp, BookOpen, Eye } from 'lucide-react';
+
+/** Classic awareness quotes — shown on the "觉察" button tap */
+const AWARENESS_QUOTES = [
+  { text: '一切福田，不离方寸', source: '六祖坛经' },
+  { text: '知过能改，善莫大焉', source: '左传' },
+  { text: '勿以善小而不为，勿以恶小而为之', source: '三国志' },
+  { text: '但行好事，莫问前程', source: '增广贤文' },
+  { text: '见人恶，即内省；有则改，无加警', source: '弟子规' },
+  { text: '诸恶莫作，众善奉行，自净其意', source: '七佛通诫偈' },
+  { text: '命由我作，福自己求', source: '了凡四训' },
+  { text: '一念之善，吉神随之', source: '太上感应篇' },
+  { text: '从前种种，譬如昨日死；从后种种，譬如今日生', source: '了凡四训' },
+  { text: '起心动念，无不是业', source: '华严经' },
+  { text: '满腔都是恻隐，方可为人', source: '警世功过格' },
+  { text: '圣贤之道，惟诚与明', source: '了凡四训' },
+];
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -16,6 +31,9 @@ export default function HomePage() {
   const streak = useStreakDays();
   const todayRecords = useRecordsByDate(today);
 
+  const [showQuote, setShowQuote] = useState(false);
+  const [quoteIndex, setQuoteIndex] = useState(0);
+
   const greeting = getLunarGreeting();
   const dateDisplay = formatDateChinese(today);
 
@@ -24,15 +42,16 @@ export default function HomePage() {
   const todayBad = todayRecords.filter((r) => r.type === 'bad').length;
   const hasRecordsToday = todayRecords.length > 0;
 
-  // Category breakdown for today
-  const categoryBreakdown = (['body', 'speech', 'mind'] as Category[]).map((cat) => ({
-    category: cat,
-    label: CATEGORY_LABELS[cat],
-    count: todayRecords.filter((r) => r.category === cat).length,
-  }));
-
   // Progress percentage (clamped to 100)
   const progressPercent = Math.min((totalGood / goal) * 100, 100);
+
+  const handleAwareness = () => {
+    setQuoteIndex(Math.floor(Math.random() * AWARENESS_QUOTES.length));
+    setShowQuote(true);
+    setTimeout(() => setShowQuote(false), 4000);
+  };
+
+  const quote = AWARENESS_QUOTES[quoteIndex];
 
   return (
     <div className="page-content pb-20">
@@ -47,6 +66,18 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* Awareness quote overlay */}
+      {showQuote && (
+        <div className="mx-5 mb-3 p-4 bg-accent-bg rounded-2xl border border-accent/10 animate-fade-in">
+          <p className="font-classic text-accent text-base leading-relaxed text-center">
+            {quote.text}
+          </p>
+          <p className="text-xs text-accent/60 text-center mt-1.5">
+            ——《{quote.source}》
+          </p>
+        </div>
+      )}
+
       {/* Progress card */}
       <section className="mx-5 mt-2 p-5 bg-surface rounded-2xl border border-border">
         <div className="flex items-baseline gap-1.5">
@@ -60,7 +91,7 @@ export default function HomePage() {
         <div className="mt-4 h-1.5 bg-good-bg rounded-full overflow-hidden">
           <div
             className="h-full bg-good rounded-full transition-all duration-700 ease-out"
-            style={{ width: `${progressPercent}%` }}
+            style={{ width: `${Math.max(progressPercent, totalGood > 0 ? 1 : 0)}%` }}
           />
         </div>
 
@@ -89,19 +120,9 @@ export default function HomePage() {
                 <span className="text-xs text-text-muted ml-1">功</span>
               </div>
               <div>
-                <span className="text-2xl font-light text-accent tabular-nums">{todayBad}</span>
+                <span className="text-2xl font-light text-bad tabular-nums">{todayBad}</span>
                 <span className="text-xs text-text-muted ml-1">过</span>
               </div>
-            </div>
-
-            {/* Category breakdown */}
-            <div className="flex items-center gap-4 pt-1">
-              {categoryBreakdown.map((item) => (
-                <div key={item.category} className="flex items-center gap-1">
-                  <span className="text-xs text-text-muted">{item.label}</span>
-                  <span className="text-xs text-text-secondary tabular-nums">{item.count}</span>
-                </div>
-              ))}
             </div>
           </div>
         ) : (
@@ -114,17 +135,30 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* Quick action button */}
-      <div className="mx-5 mt-6">
+      {/* Action buttons */}
+      <div className="mx-5 mt-6 flex gap-3">
+        {/* Main: start recording */}
         <button
           onClick={() => navigate('/record')}
-          className="w-full py-3.5 bg-good-bg text-good rounded-xl text-sm font-medium
+          className="flex-1 py-3.5 bg-good-bg text-good rounded-xl text-sm font-medium
                      hover:brightness-95 active:scale-[0.98] transition-all duration-150"
         >
           <span className="flex items-center justify-center gap-2">
             <BookOpen size={16} />
-            开始今日记录
+            {hasRecordsToday ? '继续记录' : '开始今日记录'}
           </span>
+        </button>
+
+        {/* Awareness button */}
+        <button
+          onClick={handleAwareness}
+          className="w-14 py-3.5 bg-accent-bg text-accent rounded-xl text-sm font-medium
+                     hover:brightness-95 active:scale-[0.98] transition-all duration-150
+                     flex items-center justify-center"
+          aria-label="觉察"
+          title="觉察 — 即时警语"
+        >
+          <Eye size={18} />
         </button>
       </div>
     </div>

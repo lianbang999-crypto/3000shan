@@ -7,7 +7,6 @@ import {
   ChevronRight,
   ChevronLeft,
   Check,
-  BookOpen,
   Heart,
   Compass,
 } from 'lucide-react';
@@ -81,10 +80,11 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
 
 function WelcomeStep({ onNext }: { onNext: () => void }) {
   return (
-    <div className="flex flex-col items-center justify-center flex-1 px-8 text-center">
+    <div className="flex flex-col items-center justify-center flex-1 px-8 text-center animate-fade-in">
       <div className="mb-6">
-        <BookOpen size={28} className="mx-auto text-accent/60 mb-4" />
-        <span className="font-classic text-4xl text-accent leading-none">善</span>
+        <div className="w-20 h-20 rounded-full bg-accent-bg flex items-center justify-center mx-auto mb-4">
+          <span className="font-classic text-4xl text-accent leading-none">善</span>
+        </div>
       </div>
 
       <h1 className="font-classic text-3xl text-text tracking-widest mb-2">三千善</h1>
@@ -135,7 +135,7 @@ function HowItWorksStep({
   ] as const;
 
   return (
-    <div className="flex flex-col flex-1 px-8">
+    <div className="flex flex-col flex-1 px-8 animate-fade-in">
       <div className="flex-1 flex flex-col justify-center">
         <h2 className="font-classic text-2xl text-text text-center mb-10 tracking-wide">
           如何使用
@@ -232,7 +232,7 @@ function StarterItemsStep({
   const selectedCount = selected.size;
 
   return (
-    <div className="flex flex-col flex-1 min-h-0">
+    <div className="flex flex-col flex-1 min-h-0 animate-fade-in">
       {/* Header area (fixed) */}
       <div className="px-6 pt-2 pb-3 shrink-0">
         <h2 className="font-classic text-2xl text-text text-center tracking-wide">

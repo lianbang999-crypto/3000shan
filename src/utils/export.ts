@@ -22,7 +22,8 @@ export interface Favorite {
 export interface DailyRecord {
   id: string;
   date: string;
-  itemId: string;
+  itemId?: string;
+  text?: string;
   type: ItemType;
   category: Category;
   note: string;
@@ -40,12 +41,13 @@ export interface Reflection {
 export function exportToJSON(records: DailyRecord[], items: DeedItem[]): string {
   const itemMap = new Map(items.map(i => [i.id, i]));
   const exportData = records.map(r => {
-    const item = itemMap.get(r.itemId);
+    const item = r.itemId ? itemMap.get(r.itemId) : undefined;
+    const displayText = r.text || item?.text || '(未知)';
     return {
       date: r.date,
       type: r.type === 'good' ? '功' : '过',
       category: r.category === 'body' ? '身' : r.category === 'speech' ? '口' : '意',
-      item: item?.text || '(已删除)',
+      item: displayText,
       note: r.note || '',
       isBackfill: r.isBackfill,
     };
@@ -57,10 +59,10 @@ export function exportToCSV(records: DailyRecord[], items: DeedItem[]): string {
   const itemMap = new Map(items.map(i => [i.id, i]));
   const header = '日期,类型,三业,条目,笔记,是否补录\n';
   const rows = records.map(r => {
-    const item = itemMap.get(r.itemId);
+    const item = r.itemId ? itemMap.get(r.itemId) : undefined;
     const type = r.type === 'good' ? '功' : '过';
     const cat = r.category === 'body' ? '身' : r.category === 'speech' ? '口' : '意';
-    const text = (item?.text || '已删除').replace(/"/g, '""');
+    const text = (r.text || item?.text || '已删除').replace(/"/g, '""');
     const note = (r.note || '').replace(/"/g, '""');
     return `${r.date},${type},${cat},"${text}","${note}",${r.isBackfill ? '是' : '否'}`;
   });
